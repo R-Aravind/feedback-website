@@ -9,6 +9,9 @@
 
     <title>Feedback</title>
 
+    <!-- MAIN STYLESHEET -->
+    <link rel="stylesheet" href="assets/css/main.css">
+
     <!-- FONTAWESOME CDN -->
     <script src="https://kit.fontawesome.com/3473588ce0.js"></script>
 
@@ -17,7 +20,7 @@
 <body>
 
     <header>
-        <div class="logo">SURVEY</div>
+        <div class="logo">Survey</div>
         <nav>
             <ol>
                 <a href="">Home</a>
@@ -29,48 +32,63 @@
 
     <main>
 
-        <div>
+        <div class="home">
             <h1>We'd love to hear from you</h1>
             <p>Contact us using the form below and we'll get back to you right away</p>
         </div>
 
-        <div>
-            <input type="text" placeholder="Full Name">
-            <input type="text" placeholder="Email">
-            <input type="text" placeholder="Phone Number">
-            <input type="text" placeholder="Age">
+        <div class="survey-box">
 
-            <input type="radio" name="gender"> Male
-            <input type="radio" name="gender"> Female
-            <input type="radio" name="gender"> Other
+            <div class="survey">
 
-            <br>
-            Rate your experience at ISQIP 19
-            <div>
-                <span class="fas fa-dizzy"></span>
-                <span class="fas fa-frown"></span>
-                <span class="fas fa-meh"></span>
-                <span class="fas fa-smile"></span>
-                <span class="fas fa-laugh-beam"></span>
+                <div class="input"><input type="text" placeholder="Full Name"></div>
+                <div class="input"><input type="text" placeholder="Email"></div>
+                <div class="input"><input type="text" placeholder="Phone Number"></div>
+                <div class="input"><input type="text" placeholder="Age"></div>
+
+                <br>
+                <div class="gender">
+                    <input type="radio" name="gender">Male
+                    <input type="radio" name="gender">Female
+                    <input type="radio" name="gender">Other
+                </div>
+                <br>
+                Rate your experience at ISQIP 19
+                <div class="slider-box">
+                    <div class="slider-value">
+                        <div>1</div>
+                        <div>2</div>
+                        <div>3</div>
+                        <div>4</div>
+                        <div>5</div>
+                    </div>
+                    <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
+                </div>
+
+                <br>
+                Your Suggestions and Feedback :
+                <br>
+                <textarea name="" id="" cols="40" rows="5" placeholder=""></textarea>
+                <br>
+                <button type="submit">Submit</button>
+
             </div>
 
-            <br>
-            Your Suggestions and Feedback :
-            <br>
-            <textarea name="" id="" cols="40" rows="5" placeholder=""></textarea>
-            <br>
-            <button type="submit">Submit</button>
-
         </div>
+
     </main>
 
     <footer>
-        Made with <span style="color: red;">&hearts;</span> by Aravind
+
         <div class="links">
             <ol>
-
+                <a href="https://www.behance.net/aravindr"><i class="fab fa-behance"></i></a>
+                <a href="https://github.com/R-Aravind"><i class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/r--aravind/"><i class="fab fa-linkedin"></i></a>
             </ol>
         </div>
+
+        <div>Made with <span style="color:black;">&hearts;</span> by Aravind</div>
     </footer>
 
 </body>
