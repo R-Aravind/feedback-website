@@ -1,1 +1,4 @@
-# JAVASCRIPT TO BE ADDED IN A FEW HOURS
+# FEEDBACK WEBSITE 
+
+A website to collect and display feedback of an event.
+
