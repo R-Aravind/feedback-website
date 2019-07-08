@@ -1,7 +1,9 @@
+@import url('https://fonts.googleapis.com/css?family=Ubuntu&display=swap');
+
 * {
     margin: 0;
     padding: 0;
-    font-family: sans-serif;
+    font-family: Ubuntu;
 }
 
 /* MAIN CSS */
@@ -9,10 +11,11 @@
 header {
     height: 10vh;
     display: flex;
+    color: white;
+    background: #504BE5;
     justify-content: space-between;
     text-align: left;
     border-bottom: 1px solid lightgray;
-    background: rgba(200, 234, 235, 1);
 }
 
 header div.logo {
@@ -21,36 +24,13 @@ header div.logo {
     font-weight: bold;
 }
 
-nav {
-    padding: 3vh;
-    width: 25vw;
-}
-
-nav ol {
-    display: flex;
-    justify-content: space-around;
-}
-
-nav ol a {
-    color: white;
-    text-decoration: none;
-    font-size: 1.2em;
-    font-weight: 400;
-}
-
 main {
-    background: rgba(200, 234, 235, 1);
-    background: -moz-linear-gradient(45deg, rgba(200, 234, 235, 1) 0%, rgba(147, 227, 230, 1) 32%, rgba(170, 228, 235, 1) 64%, rgba(176, 241, 255, 1) 100%);
-    background: -webkit-gradient(left bottom, right top, color-stop(0%, rgba(200, 234, 235, 1)), color-stop(32%, rgba(147, 227, 230, 1)), color-stop(64%, rgba(170, 228, 235, 1)), color-stop(100%, rgba(176, 241, 255, 1)));
-    background: -webkit-linear-gradient(45deg, rgba(200, 234, 235, 1) 0%, rgba(147, 227, 230, 1) 32%, rgba(170, 228, 235, 1) 64%, rgba(176, 241, 255, 1) 100%);
-    background: -o-linear-gradient(45deg, rgba(200, 234, 235, 1) 0%, rgba(147, 227, 230, 1) 32%, rgba(170, 228, 235, 1) 64%, rgba(176, 241, 255, 1) 100%);
-    background: -ms-linear-gradient(45deg, rgba(200, 234, 235, 1) 0%, rgba(147, 227, 230, 1) 32%, rgba(170, 228, 235, 1) 64%, rgba(176, 241, 255, 1) 100%);
-    background: linear-gradient(45deg, rgba(200, 234, 235, 1) 0%, rgba(147, 227, 230, 1) 32%, rgba(170, 228, 235, 1) 64%, rgba(176, 241, 255, 1) 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#c8eaeb', endColorstr='#b0f1ff', GradientType=1);
+    display: flex;
 }
 
 main div.home {
-    height: 90vh;
+    height: 120vh;
+    width: 38vw;
     display: flex;
     justify-content: center;
     text-align: center;
@@ -61,17 +41,18 @@ main div.home {
 }
 
 main div.home h1 {
-    font-size: 2.5em;
+    font-size: 3.2em;
     font-weight: 900;
 }
 
 main div.home p {
     color: rgb(137, 138, 177);
     font-weight: 400;
+    font-size: 1.4em;
 }
 
 main div.survey-box {
-    width: 100vw;
+    width: 50vw;
     height: 150vh;
     background-color: white;
     display: flex;
@@ -80,24 +61,32 @@ main div.survey-box {
 }
 
 main div.survey-box div.survey {
-    width: 75vw;
+    width: 40vw;
     height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     padding: 20px;
     background-color: white;
-    border: 1px solid lightgray;
+    border: 0.5px solid rgba(0, 0, 0, 0.07);
     border-radius: 10px;
     font-size: 0.9em;
+    align-items: center;
+}
+
+main div.survey-box div.survey:hover {
+    -webkit-box-shadow: 0px 0px 24px 0px rgba(0, 0, 0, 0.11);
+    -moz-box-shadow: 0px 0px 24px 0px rgba(0, 0, 0, 0.11);
+    box-shadow: 0px 0px 24px 0px rgba(0, 0, 0, 0.11);
 }
 
 main div.survey-box div.survey div.input {
     padding: 10px;
+    width: 30vw;
 }
 
 main div.survey-box div.survey input {
-    width: 65vw;
+    width: 30vw;
     border: none;
     border-bottom: 0.5px solid rgb(238, 238, 238);
     padding: 5px;
@@ -105,18 +94,23 @@ main div.survey-box div.survey input {
 
 main div.survey-box div.survey div.gender {
     display: flex;
-    width: 65vw;
+    width: 30vw;
     font-size: 0.8em;
     padding: 5px;
+}
+
+main div.survey-box div.survey div.gender input {
+    width: 2vw;
 }
 
 main div.survey-box div.survey div.slider-box {
     display: flex;
     flex-direction: column;
-    width: 65vw;
+    width: 30vw;
     align-content: center;
     justify-content: center;
     padding: 5px;
+    border: none;
 }
 
 main div.survey-box div.survey div.slider-box .slider-value {
@@ -124,14 +118,16 @@ main div.survey-box div.survey div.slider-box .slider-value {
     width: 100%;
     display: flex;
     justify-content: space-between;
+    border: none;
 }
 
 main div.survey-box div.survey div.slider-box .slider {
     -webkit-appearance: none;
     width: 99%;
     height: 10px;
-    background: #d3d3d3;
+    //    background: #d3d3d3;
     outline: none;
+    border: none;
     opacity: 0.7;
     -webkit-transition: .2s;
     transition: opacity .2s;
@@ -144,36 +140,39 @@ main div.survey-box div.survey div.slider-box .slider:hover {
 main div.survey-box div.survey div.slider-box .slider::-webkit-slider-thumb {
     -webkit-appearance: none;
     appearance: none;
-    width: 10px;
-    height: 10px;
-    background: rgb(238, 238, 238);
+    width: 15px;
+    height: 15px;
+    border-radius: 15px;
+    background: #504BE5;
     cursor: pointer;
 }
 
 main div.survey-box div.survey div.slider-box .slider::-moz-range-thumb {
     width: 10px;
     height: 10px;
-    background: rgb(238, 238, 238);
+    background: #504BE5;
     cursor: pointer;
 }
 
 main div.survey-box div.survey textarea {
+    width: 30vw;
     border: 0.5px solid rgb(238, 238, 238);
     border-radius: 5px;
 }
 
 main div.survey-box div.survey button {
     border: none;
+    width: 10vw;
     padding: 10px;
     background-color: white;
     font-size: 1em;
-    border: 0.8px solid rgb(182, 204, 224);
-    color: rgb(182, 204, 224);
+    border: 0.8px solid #504BE5;
+    color: #504BE5;
     border-radius: 35px;
 }
 
 main div.survey-box div.survey button:hover {
-    background-color: rgb(182, 204, 224);
+    background-color: #504BE5;
     color: white;
     transition: background-color 1s;
 }
@@ -182,27 +181,23 @@ footer {
     width: 100%;
     height: 20vh;
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
-    flex-direction: column;
-
-    background: rgba(200, 234, 235, 1);
-    background: -moz-linear-gradient(45deg, rgba(200, 234, 235, 1) 0%, rgba(147, 227, 230, 1) 32%, rgba(170, 228, 235, 1) 64%, rgba(176, 241, 255, 1) 100%);
-    background: -webkit-gradient(left bottom, right top, color-stop(0%, rgba(200, 234, 235, 1)), color-stop(32%, rgba(147, 227, 230, 1)), color-stop(64%, rgba(170, 228, 235, 1)), color-stop(100%, rgba(176, 241, 255, 1)));
-    background: -webkit-linear-gradient(45deg, rgba(200, 234, 235, 1) 0%, rgba(147, 227, 230, 1) 32%, rgba(170, 228, 235, 1) 64%, rgba(176, 241, 255, 1) 100%);
-    background: -o-linear-gradient(45deg, rgba(200, 234, 235, 1) 0%, rgba(147, 227, 230, 1) 32%, rgba(170, 228, 235, 1) 64%, rgba(176, 241, 255, 1) 100%);
-    background: -ms-linear-gradient(45deg, rgba(200, 234, 235, 1) 0%, rgba(147, 227, 230, 1) 32%, rgba(170, 228, 235, 1) 64%, rgba(176, 241, 255, 1) 100%);
-    background: linear-gradient(45deg, rgba(200, 234, 235, 1) 0%, rgba(147, 227, 230, 1) 32%, rgba(170, 228, 235, 1) 64%, rgba(176, 241, 255, 1) 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#c8eaeb', endColorstr='#b0f1ff', GradientType=1);
+    background-color: #504BE5;
 }
 
 footer div {
+    text-align: center;
+    color: white;
     padding: 5px;
+    width: 30vw;
+    font-size: 1.35em;
+    float: left;
 }
 
 footer div.links ol {
     display: flex;
-    width: 60vw;
+    width: 30vw;
     justify-content: space-evenly;
 }
 
@@ -223,7 +218,8 @@ footer div.links ol a:hover {
     header {
         height: 12.3vh;
         text-align: left;
-        border-bottom: 1px solid lightgray;
+        border-bottom: 0.1px solid lightgray;
+        color: white;
     }
 
     header div.logo {
@@ -236,26 +232,21 @@ footer div.links ol a:hover {
         display: none;
     }
 
-    main {
-        background: rgba(200, 234, 235, 1);
-        background: -moz-linear-gradient(45deg, rgba(200, 234, 235, 1) 0%, rgba(147, 227, 230, 1) 32%, rgba(170, 228, 235, 1) 64%, rgba(176, 241, 255, 1) 100%);
-        background: -webkit-gradient(left bottom, right top, color-stop(0%, rgba(200, 234, 235, 1)), color-stop(32%, rgba(147, 227, 230, 1)), color-stop(64%, rgba(170, 228, 235, 1)), color-stop(100%, rgba(176, 241, 255, 1)));
-        background: -webkit-linear-gradient(45deg, rgba(200, 234, 235, 1) 0%, rgba(147, 227, 230, 1) 32%, rgba(170, 228, 235, 1) 64%, rgba(176, 241, 255, 1) 100%);
-        background: -o-linear-gradient(45deg, rgba(200, 234, 235, 1) 0%, rgba(147, 227, 230, 1) 32%, rgba(170, 228, 235, 1) 64%, rgba(176, 241, 255, 1) 100%);
-        background: -ms-linear-gradient(45deg, rgba(200, 234, 235, 1) 0%, rgba(147, 227, 230, 1) 32%, rgba(170, 228, 235, 1) 64%, rgba(176, 241, 255, 1) 100%);
-        background: linear-gradient(45deg, rgba(200, 234, 235, 1) 0%, rgba(147, 227, 230, 1) 32%, rgba(170, 228, 235, 1) 64%, rgba(176, 241, 255, 1) 100%);
-        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#c8eaeb', endColorstr='#b0f1ff', GradientType=1);
+    main,
+    header,
+    footer {
+        background-color: #504BE5;
     }
 
     main div.home {
-        height: 87.7vh;
+        height: 40vh;
         display: flex;
         justify-content: center;
         text-align: center;
         flex-direction: column;
         padding-left: 6vw;
         padding-right: 6vw;
-        color: rgb(26, 27, 90);
+        color: white;
     }
 
     main div.home h1 {
@@ -264,13 +255,14 @@ footer div.links ol a:hover {
     }
 
     main div.home p {
-        color: rgb(137, 138, 177);
+        color: white;
+        font-size: 0.7 em;
         font-weight: 400;
     }
 
     main div.survey-box {
         width: 100vw;
-        height: 150vh;
+        height: 120vh;
         background-color: white;
         display: flex;
         justify-content: center;
@@ -365,13 +357,13 @@ footer div.links ol a:hover {
         padding: 10px;
         background-color: white;
         font-size: 1em;
-        border: 0.8px solid rgb(182, 204, 224);
-        color: rgb(182, 204, 224);
+        border: 0.8px solid #504BE5;
+        color: #504BE5;
         border-radius: 35px;
     }
 
     main div.survey-box div.survey button:hover {
-        background-color: rgb(182, 204, 224);
+        background-color: #504BE5;
         color: white;
         transition: background-color 1s;
     }
@@ -383,15 +375,6 @@ footer div.links ol a:hover {
         justify-content: center;
         align-items: center;
         flex-direction: column;
-
-        background: rgba(200, 234, 235, 1);
-        background: -moz-linear-gradient(45deg, rgba(200, 234, 235, 1) 0%, rgba(147, 227, 230, 1) 32%, rgba(170, 228, 235, 1) 64%, rgba(176, 241, 255, 1) 100%);
-        background: -webkit-gradient(left bottom, right top, color-stop(0%, rgba(200, 234, 235, 1)), color-stop(32%, rgba(147, 227, 230, 1)), color-stop(64%, rgba(170, 228, 235, 1)), color-stop(100%, rgba(176, 241, 255, 1)));
-        background: -webkit-linear-gradient(45deg, rgba(200, 234, 235, 1) 0%, rgba(147, 227, 230, 1) 32%, rgba(170, 228, 235, 1) 64%, rgba(176, 241, 255, 1) 100%);
-        background: -o-linear-gradient(45deg, rgba(200, 234, 235, 1) 0%, rgba(147, 227, 230, 1) 32%, rgba(170, 228, 235, 1) 64%, rgba(176, 241, 255, 1) 100%);
-        background: -ms-linear-gradient(45deg, rgba(200, 234, 235, 1) 0%, rgba(147, 227, 230, 1) 32%, rgba(170, 228, 235, 1) 64%, rgba(176, 241, 255, 1) 100%);
-        background: linear-gradient(45deg, rgba(200, 234, 235, 1) 0%, rgba(147, 227, 230, 1) 32%, rgba(170, 228, 235, 1) 64%, rgba(176, 241, 255, 1) 100%);
-        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#c8eaeb', endColorstr='#b0f1ff', GradientType=1);
     }
 
     footer div {
