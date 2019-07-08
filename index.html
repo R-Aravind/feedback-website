@@ -34,16 +34,16 @@
 
             <div class="survey">
 
-                <div class="input"><input type="text" placeholder="Full Name"></div>
-                <div class="input"><input type="text" placeholder="Email"></div>
-                <div class="input"><input type="text" placeholder="Phone Number"></div>
-                <div class="input"><input type="text" placeholder="Age"></div>
+                <div class="input"><input type="text" value="" id="name" placeholder="Full Name"></div>
+                <div class="input"><input type="text" value="" id="email" placeholder="Email"></div>
+                <div class="input"><input type="text" value="" id="phone" placeholder="Phone Number"></div>
+                <div class="input"><input type="text" value="" id="age" placeholder="Age"></div>
 
                 <br>
                 <div class="gender">
-                    <input type="radio" name="gender">Male
-                    <input type="radio" name="gender">Female
-                    <input type="radio" name="gender">Other
+                    <input type="radio" onclick="genderCall(this.value)" value="Male" name="gender">Male
+                    <input type="radio" onclick="genderCall(this.value)" value="Female" name="gender">Female
+                    <input type="radio" onclick="genderCall(this.value)" value="Other" name="gender">Other
                 </div>
                 <br>
                 Rate your experience at ISQIP 19
@@ -55,15 +55,16 @@
                         <div>4</div>
                         <div>5</div>
                     </div>
-                    <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
+                    <input type="range" min="1" max="5" value="3" class="slider" id="slider"
+                        oninput="sliderChange(this.value)">
                 </div>
 
                 <br>
                 Your Suggestions and Feedback :
                 <br>
-                <textarea name="" id="" cols="40" rows="5" placeholder=""></textarea>
+                <textarea value="" id="feedback" cols="40" rows="5" placeholder=""></textarea>
                 <br>
-                <button type="submit">Submit</button>
+                <button onclick="clicked()" type="submit">Submit</button>
 
             </div>
 
@@ -83,6 +84,9 @@
         </div>
 
     </footer>
+
+    <!-- MAIN SCRIPT -->
+    <script src="/assets/js/main.js"></script>
 
 </body>
 
