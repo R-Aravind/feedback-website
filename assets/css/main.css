@@ -1,5 +1,16 @@
 @import url('https://fonts.googleapis.com/css?family=Ubuntu&display=swap');
 
+/*  CONTENTS 
+        MAIN CSS
+        RESPONSIVE CSS
+
+    HEADER
+    MAIN
+        HOME
+        SURVEY-BOX
+    FOOTER
+*/
+
 * {
     margin: 0;
     padding: 0;
@@ -264,7 +275,7 @@
 
     main div.survey-box {
         width: 100vw;
-        height: 120vh;
+        height: 115vh;
         background-color: white;
         display: flex;
         justify-content: center;
